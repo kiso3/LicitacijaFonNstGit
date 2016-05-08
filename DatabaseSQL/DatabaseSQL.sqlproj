@@ -64,6 +64,7 @@
     <Folder Include="Licitacija" />
     <Folder Include="dbo\" />
     <Folder Include="Snapshots" />
+    <Folder Include="_DataBaseBackUp" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Ucenik\Lice.sql" />
