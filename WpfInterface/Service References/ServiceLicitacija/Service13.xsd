@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/DomenskeKlase.Licitacija" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/DomenskeKlase.Licitacija" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:27169/Service1.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/DomenskeKlase.LicitacijaPriprema" />
+  <xs:import schemaLocation="http://localhost:27169/Service1.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/DomenskeKlase.Ucenik" />
+  <xs:import schemaLocation="http://localhost:27169/Service1.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="ArrayOfPrijava">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Prijava" nillable="true" type="tns:Prijava" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPrijava" nillable="true" type="tns:ArrayOfPrijava" />
+  <xs:complexType name="Prijava">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DatumObilaska" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Datumpodnosenja" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DokazOUplatiDepozita" type="xs:boolean" />
+      <xs:element minOccurs="0" name="DokazOVlasnistvu" type="xs:boolean" />
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/DomenskeKlase.LicitacijaPriprema" minOccurs="0" name="Nadmetanje" nillable="true" type="q1:Nadmetanje" />
+      <xs:element minOccurs="0" name="Obisao" nillable="true" type="xs:boolean" />
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/DomenskeKlase.Ucenik" minOccurs="0" name="Predstavnik" nillable="true" type="q2:Predstavnik" />
+      <xs:element minOccurs="0" name="PrijavaId" type="xs:int" />
+      <xs:element minOccurs="0" name="PrijavaUZapisniku" nillable="true" type="tns:PrijavaUZapisniku" />
+      <xs:element minOccurs="0" name="RegistarPoljGazd" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ResenjePio" type="xs:boolean" />
+      <xs:element minOccurs="0" name="UMestu" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UpoznatSaPonudom" type="xs:boolean" />
+    </xs:sequence>
+    <xs:attribute ref="ser:Id" />
+    <xs:attribute ref="ser:Ref" />
+  </xs:complexType>
+  <xs:element name="Prijava" nillable="true" type="tns:Prijava" />
+  <xs:complexType name="PrijavaUZapisniku">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BrLicitatorskeKartice" type="xs:int" />
+      <xs:element minOccurs="0" name="IzreceneMere" nillable="true" type="tns:IzreceneMere" />
+      <xs:element minOccurs="0" name="LicitiranaCena" type="xs:double" />
+      <xs:element minOccurs="0" name="Odluka" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Pobednik" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Prigovorprimedba" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Prijava" nillable="true" type="tns:Prijava" />
+      <xs:element minOccurs="0" name="Prisutan" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Rb" type="xs:int" />
+      <xs:element minOccurs="0" name="Zapisnik" nillable="true" type="tns:Zapisnik" />
+      <xs:element minOccurs="0" name="ZapisnikId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PrijavaUZapisniku" nillable="true" type="tns:PrijavaUZapisniku" />
+  <xs:complexType name="IzreceneMere">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="IzreceneMereId" type="xs:int" />
+      <xs:element minOccurs="0" name="Naziv" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="IzreceneMere" nillable="true" type="tns:IzreceneMere" />
+  <xs:complexType name="Zapisnik">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AdresaLicitacije" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ClanoviZapisnikKomisije" nillable="true" type="tns:ArrayOfClanoviZapisnikKomisija" />
+      <xs:element minOccurs="0" name="DatumVremePocetka" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DatumVremeZavrsetka" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Mesto" nillable="true" type="xs:string" />
+      <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/DomenskeKlase.LicitacijaPriprema" minOccurs="0" name="Nadmetanje" nillable="true" type="q3:Nadmetanje" />
+      <xs:element minOccurs="0" name="Odrzana" type="xs:boolean" />
+      <xs:element minOccurs="0" name="PrijavaUZapisniku" nillable="true" type="tns:ArrayOfPrijavaUZapisniku" />
+      <xs:element minOccurs="0" name="ZapisnikId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Zapisnik" nillable="true" type="tns:Zapisnik" />
+  <xs:complexType name="ArrayOfClanoviZapisnikKomisija">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ClanoviZapisnikKomisija" nillable="true" type="tns:ClanoviZapisnikKomisija" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfClanoviZapisnikKomisija" nillable="true" type="tns:ArrayOfClanoviZapisnikKomisija" />
+  <xs:complexType name="ClanoviZapisnikKomisija">
+    <xs:sequence>
+      <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/DomenskeKlase.Ucenik" minOccurs="0" name="Komisija" nillable="true" type="q4:Komisija" />
+      <xs:element minOccurs="0" name="LiceId" type="xs:int" />
+      <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/DomenskeKlase.LicitacijaPriprema" minOccurs="0" name="UlogaClanaKomisije" nillable="true" type="q5:UlogaClanaKomisije" />
+      <xs:element minOccurs="0" name="UlogaClanaKomisijeId" type="xs:int" />
+      <xs:element minOccurs="0" name="Zapisnik" nillable="true" type="tns:Zapisnik" />
+      <xs:element minOccurs="0" name="ZapisnikId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ClanoviZapisnikKomisija" nillable="true" type="tns:ClanoviZapisnikKomisija" />
+  <xs:complexType name="ArrayOfPrijavaUZapisniku">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PrijavaUZapisniku" nillable="true" type="tns:PrijavaUZapisniku" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPrijavaUZapisniku" nillable="true" type="tns:ArrayOfPrijavaUZapisniku" />
+  <xs:complexType name="PrijavaPravno">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Prijava">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="IzvodizprivrednogRegistra" type="xs:boolean" />
+          <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/DomenskeKlase.Ucenik" minOccurs="0" name="Pravno" nillable="true" type="q6:Pravno" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PrijavaPravno" nillable="true" type="tns:PrijavaPravno" />
+  <xs:complexType name="PrijavaFizicko">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Prijava">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="DokazOGranicnomZemljistu" type="xs:boolean" />
+          <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/DomenskeKlase.Ucenik" minOccurs="0" name="Fizicko" nillable="true" type="q7:Fizicko" />
+          <xs:element minOccurs="0" name="LicnaKarta" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PrijavaFizicko" nillable="true" type="tns:PrijavaFizicko" />
+</xs:schema>

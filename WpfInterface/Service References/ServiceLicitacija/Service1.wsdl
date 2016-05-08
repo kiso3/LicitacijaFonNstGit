@@ -1,0 +1,574 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Service1" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:27169/Service1.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:27169/Service1.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:27169/Service1.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/ServiceProxies" />
+      <xsd:import schemaLocation="http://localhost:27169/Service1.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/DomenskeKlase.Ucenik" />
+      <xsd:import schemaLocation="http://localhost:27169/Service1.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/DomenskeKlase.LicitacijaPriprema" />
+      <xsd:import schemaLocation="http://localhost:27169/Service1.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/DomenskeKlase.Licitacija" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IService1_InsertLiceSoWcf_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertLiceSoWcf" />
+  </wsdl:message>
+  <wsdl:message name="IService1_InsertLiceSoWcf_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertLiceSoWcfResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeleteLiceSoWcf_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteLiceSoWcf" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeleteLiceSoWcf_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteLiceSoWcfResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AzurirajLiceSoWcf_InputMessage">
+    <wsdl:part name="parameters" element="tns:AzurirajLiceSoWcf" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AzurirajLiceSoWcf_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AzurirajLiceSoWcfResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetLiceSoWcf_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLiceSoWcf" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetLiceSoWcf_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLiceSoWcfResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetAllLiceSoWcf_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllLiceSoWcf" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetAllLiceSoWcf_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllLiceSoWcfResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_InsertFizickoSoWcf_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertFizickoSoWcf" />
+  </wsdl:message>
+  <wsdl:message name="IService1_InsertFizickoSoWcf_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertFizickoSoWcfResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeleteFizickoSoWcf_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteFizickoSoWcf" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeleteFizickoSoWcf_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteFizickoSoWcfResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AzurirajFizickoSoWcf_InputMessage">
+    <wsdl:part name="parameters" element="tns:AzurirajFizickoSoWcf" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AzurirajFizickoSoWcf_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AzurirajFizickoSoWcfResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetFizickoSoWcf_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFizickoSoWcf" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetFizickoSoWcf_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFizickoSoWcfResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetAllFizickoSoWcf_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllFizickoSoWcf" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetAllFizickoSoWcf_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllFizickoSoWcfResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_InsertPravnoSoWcf_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertPravnoSoWcf" />
+  </wsdl:message>
+  <wsdl:message name="IService1_InsertPravnoSoWcf_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertPravnoSoWcfResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeletePravnoSoWcf_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeletePravnoSoWcf" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeletePravnoSoWcf_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeletePravnoSoWcfResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AzurirajPravnoSoWcf_InputMessage">
+    <wsdl:part name="parameters" element="tns:AzurirajPravnoSoWcf" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AzurirajPravnoSoWcf_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AzurirajPravnoSoWcfResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetPravnoSoWcf_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPravnoSoWcf" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetPravnoSoWcf_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPravnoSoWcfResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetAllPravnoSoWcf_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllPravnoSoWcf" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetAllPravnoSoWcf_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllPravnoSoWcfResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_IsertMestoSoWcf_InputMessage">
+    <wsdl:part name="parameters" element="tns:IsertMestoSoWcf" />
+  </wsdl:message>
+  <wsdl:message name="IService1_IsertMestoSoWcf_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IsertMestoSoWcfResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeleteMestoSoWcf_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteMestoSoWcf" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeleteMestoSoWcf_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteMestoSoWcfResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AzurirajMestooSoWcf_InputMessage">
+    <wsdl:part name="parameters" element="tns:AzurirajMestooSoWcf" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AzurirajMestooSoWcf_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AzurirajMestooSoWcfResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetMestoSoWcf_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMestoSoWcf" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetMestoSoWcf_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMestoSoWcfResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetAllMestoSoWcf_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllMestoSoWcf" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetAllMestoSoWcf_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllMestoSoWcfResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetAllOglasSoWcf_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllOglasSoWcf" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetAllOglasSoWcf_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllOglasSoWcfResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetAllResenjeSoWcf_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllResenjeSoWcf" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetAllResenjeSoWcf_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllResenjeSoWcfResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetNadmetanjeSoWcf_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNadmetanjeSoWcf" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetNadmetanjeSoWcf_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNadmetanjeSoWcfResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetAllNadmetanjeForOglasSoWcf_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllNadmetanjeForOglasSoWcf" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetAllNadmetanjeForOglasSoWcf_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllNadmetanjeForOglasSoWcfResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_InsertPrijavaSoWcf_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertPrijavaSoWcf" />
+  </wsdl:message>
+  <wsdl:message name="IService1_InsertPrijavaSoWcf_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertPrijavaSoWcfResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeletePrijavaSoWcf_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeletePrijavaSoWcf" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeletePrijavaSoWcf_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeletePrijavaSoWcfResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AzurirajPrijavaSoWcf_InputMessage">
+    <wsdl:part name="parameters" element="tns:AzurirajPrijavaSoWcf" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AzurirajPrijavaSoWcf_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AzurirajPrijavaSoWcfResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetAllLiceForPrijavaSoWcf_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllLiceForPrijavaSoWcf" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetAllLiceForPrijavaSoWcf_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllLiceForPrijavaSoWcfResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetAllPrijavaForNadmetanjeSoWcf_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllPrijavaForNadmetanjeSoWcf" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetAllPrijavaForNadmetanjeSoWcf_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllPrijavaForNadmetanjeSoWcfResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IService1">
+    <wsdl:operation name="InsertLiceSoWcf">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/InsertLiceSoWcf" message="tns:IService1_InsertLiceSoWcf_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/InsertLiceSoWcfResponse" message="tns:IService1_InsertLiceSoWcf_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteLiceSoWcf">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/DeleteLiceSoWcf" message="tns:IService1_DeleteLiceSoWcf_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/DeleteLiceSoWcfResponse" message="tns:IService1_DeleteLiceSoWcf_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AzurirajLiceSoWcf">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/AzurirajLiceSoWcf" message="tns:IService1_AzurirajLiceSoWcf_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/AzurirajLiceSoWcfResponse" message="tns:IService1_AzurirajLiceSoWcf_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLiceSoWcf">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetLiceSoWcf" message="tns:IService1_GetLiceSoWcf_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetLiceSoWcfResponse" message="tns:IService1_GetLiceSoWcf_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllLiceSoWcf">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetAllLiceSoWcf" message="tns:IService1_GetAllLiceSoWcf_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetAllLiceSoWcfResponse" message="tns:IService1_GetAllLiceSoWcf_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertFizickoSoWcf">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/InsertFizickoSoWcf" message="tns:IService1_InsertFizickoSoWcf_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/InsertFizickoSoWcfResponse" message="tns:IService1_InsertFizickoSoWcf_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteFizickoSoWcf">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/DeleteFizickoSoWcf" message="tns:IService1_DeleteFizickoSoWcf_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/DeleteFizickoSoWcfResponse" message="tns:IService1_DeleteFizickoSoWcf_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AzurirajFizickoSoWcf">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/AzurirajFizickoSoWcf" message="tns:IService1_AzurirajFizickoSoWcf_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/AzurirajFizickoSoWcfResponse" message="tns:IService1_AzurirajFizickoSoWcf_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFizickoSoWcf">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetFizickoSoWcf" message="tns:IService1_GetFizickoSoWcf_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetFizickoSoWcfResponse" message="tns:IService1_GetFizickoSoWcf_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllFizickoSoWcf">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetAllFizickoSoWcf" message="tns:IService1_GetAllFizickoSoWcf_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetAllFizickoSoWcfResponse" message="tns:IService1_GetAllFizickoSoWcf_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertPravnoSoWcf">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/InsertPravnoSoWcf" message="tns:IService1_InsertPravnoSoWcf_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/InsertPravnoSoWcfResponse" message="tns:IService1_InsertPravnoSoWcf_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeletePravnoSoWcf">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/DeletePravnoSoWcf" message="tns:IService1_DeletePravnoSoWcf_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/DeletePravnoSoWcfResponse" message="tns:IService1_DeletePravnoSoWcf_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AzurirajPravnoSoWcf">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/AzurirajPravnoSoWcf" message="tns:IService1_AzurirajPravnoSoWcf_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/AzurirajPravnoSoWcfResponse" message="tns:IService1_AzurirajPravnoSoWcf_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPravnoSoWcf">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetPravnoSoWcf" message="tns:IService1_GetPravnoSoWcf_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetPravnoSoWcfResponse" message="tns:IService1_GetPravnoSoWcf_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllPravnoSoWcf">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetAllPravnoSoWcf" message="tns:IService1_GetAllPravnoSoWcf_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetAllPravnoSoWcfResponse" message="tns:IService1_GetAllPravnoSoWcf_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IsertMestoSoWcf">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/IsertMestoSoWcf" message="tns:IService1_IsertMestoSoWcf_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/IsertMestoSoWcfResponse" message="tns:IService1_IsertMestoSoWcf_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteMestoSoWcf">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/DeleteMestoSoWcf" message="tns:IService1_DeleteMestoSoWcf_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/DeleteMestoSoWcfResponse" message="tns:IService1_DeleteMestoSoWcf_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AzurirajMestooSoWcf">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/AzurirajMestooSoWcf" message="tns:IService1_AzurirajMestooSoWcf_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/AzurirajMestooSoWcfResponse" message="tns:IService1_AzurirajMestooSoWcf_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMestoSoWcf">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetMestoSoWcf" message="tns:IService1_GetMestoSoWcf_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetMestoSoWcfResponse" message="tns:IService1_GetMestoSoWcf_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllMestoSoWcf">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetAllMestoSoWcf" message="tns:IService1_GetAllMestoSoWcf_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetAllMestoSoWcfResponse" message="tns:IService1_GetAllMestoSoWcf_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllOglasSoWcf">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetAllOglasSoWcf" message="tns:IService1_GetAllOglasSoWcf_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetAllOglasSoWcfResponse" message="tns:IService1_GetAllOglasSoWcf_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllResenjeSoWcf">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetAllResenjeSoWcf" message="tns:IService1_GetAllResenjeSoWcf_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetAllResenjeSoWcfResponse" message="tns:IService1_GetAllResenjeSoWcf_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNadmetanjeSoWcf">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetNadmetanjeSoWcf" message="tns:IService1_GetNadmetanjeSoWcf_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetNadmetanjeSoWcfResponse" message="tns:IService1_GetNadmetanjeSoWcf_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllNadmetanjeForOglasSoWcf">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetAllNadmetanjeForOglasSoWcf" message="tns:IService1_GetAllNadmetanjeForOglasSoWcf_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetAllNadmetanjeForOglasSoWcfResponse" message="tns:IService1_GetAllNadmetanjeForOglasSoWcf_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertPrijavaSoWcf">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/InsertPrijavaSoWcf" message="tns:IService1_InsertPrijavaSoWcf_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/InsertPrijavaSoWcfResponse" message="tns:IService1_InsertPrijavaSoWcf_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeletePrijavaSoWcf">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/DeletePrijavaSoWcf" message="tns:IService1_DeletePrijavaSoWcf_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/DeletePrijavaSoWcfResponse" message="tns:IService1_DeletePrijavaSoWcf_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AzurirajPrijavaSoWcf">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/AzurirajPrijavaSoWcf" message="tns:IService1_AzurirajPrijavaSoWcf_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/AzurirajPrijavaSoWcfResponse" message="tns:IService1_AzurirajPrijavaSoWcf_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllLiceForPrijavaSoWcf">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetAllLiceForPrijavaSoWcf" message="tns:IService1_GetAllLiceForPrijavaSoWcf_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetAllLiceForPrijavaSoWcfResponse" message="tns:IService1_GetAllLiceForPrijavaSoWcf_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllPrijavaForNadmetanjeSoWcf">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetAllPrijavaForNadmetanjeSoWcf" message="tns:IService1_GetAllPrijavaForNadmetanjeSoWcf_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetAllPrijavaForNadmetanjeSoWcfResponse" message="tns:IService1_GetAllPrijavaForNadmetanjeSoWcf_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="InsertLiceSoWcf">
+      <soap:operation soapAction="http://tempuri.org/IService1/InsertLiceSoWcf" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteLiceSoWcf">
+      <soap:operation soapAction="http://tempuri.org/IService1/DeleteLiceSoWcf" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AzurirajLiceSoWcf">
+      <soap:operation soapAction="http://tempuri.org/IService1/AzurirajLiceSoWcf" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLiceSoWcf">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetLiceSoWcf" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllLiceSoWcf">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetAllLiceSoWcf" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertFizickoSoWcf">
+      <soap:operation soapAction="http://tempuri.org/IService1/InsertFizickoSoWcf" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteFizickoSoWcf">
+      <soap:operation soapAction="http://tempuri.org/IService1/DeleteFizickoSoWcf" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AzurirajFizickoSoWcf">
+      <soap:operation soapAction="http://tempuri.org/IService1/AzurirajFizickoSoWcf" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFizickoSoWcf">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetFizickoSoWcf" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllFizickoSoWcf">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetAllFizickoSoWcf" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertPravnoSoWcf">
+      <soap:operation soapAction="http://tempuri.org/IService1/InsertPravnoSoWcf" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeletePravnoSoWcf">
+      <soap:operation soapAction="http://tempuri.org/IService1/DeletePravnoSoWcf" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AzurirajPravnoSoWcf">
+      <soap:operation soapAction="http://tempuri.org/IService1/AzurirajPravnoSoWcf" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPravnoSoWcf">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetPravnoSoWcf" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllPravnoSoWcf">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetAllPravnoSoWcf" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsertMestoSoWcf">
+      <soap:operation soapAction="http://tempuri.org/IService1/IsertMestoSoWcf" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteMestoSoWcf">
+      <soap:operation soapAction="http://tempuri.org/IService1/DeleteMestoSoWcf" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AzurirajMestooSoWcf">
+      <soap:operation soapAction="http://tempuri.org/IService1/AzurirajMestooSoWcf" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMestoSoWcf">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetMestoSoWcf" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllMestoSoWcf">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetAllMestoSoWcf" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllOglasSoWcf">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetAllOglasSoWcf" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllResenjeSoWcf">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetAllResenjeSoWcf" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNadmetanjeSoWcf">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetNadmetanjeSoWcf" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllNadmetanjeForOglasSoWcf">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetAllNadmetanjeForOglasSoWcf" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertPrijavaSoWcf">
+      <soap:operation soapAction="http://tempuri.org/IService1/InsertPrijavaSoWcf" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeletePrijavaSoWcf">
+      <soap:operation soapAction="http://tempuri.org/IService1/DeletePrijavaSoWcf" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AzurirajPrijavaSoWcf">
+      <soap:operation soapAction="http://tempuri.org/IService1/AzurirajPrijavaSoWcf" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllLiceForPrijavaSoWcf">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetAllLiceForPrijavaSoWcf" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllPrijavaForNadmetanjeSoWcf">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetAllPrijavaForNadmetanjeSoWcf" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service1">
+    <wsdl:port name="BasicHttpBinding_IService1" binding="tns:BasicHttpBinding_IService1">
+      <soap:address location="http://localhost:27169/Service1.svc/Licitacija" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

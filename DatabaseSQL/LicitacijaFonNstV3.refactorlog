@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Operations Version="1.0" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+  <Operation Name="Rename Refactor" Key="dbc379fc-1128-4e05-be27-3479999f0f0e" ChangeDateTime="05/05/2015 22:08:50">
+    <Property Name="ElementName" Value="[dbo].[Ucenik].[UcenikId]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Ucenik]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="UcesnikId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="6a59cb22-f0ed-46d6-9181-4e231b962fcc" ChangeDateTime="05/06/2015 11:25:32">
+    <Property Name="ElementName" Value="[dbo].[ProstorniEntitet].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[ProstorniEntitet]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="FeatureId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="5b78a68c-2370-47f0-84af-de7f668dfe51" ChangeDateTime="05/06/2015 11:28:53">
+    <Property Name="ElementName" Value="[dbo].[ProstorniEntitetSaUpisomPrava].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[ProstorniEntitetSaUpisomPrava]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="PESaUpisomPravaId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="8d89b62c-1cda-42a4-a38a-3537634eaad7" ChangeDateTime="05/17/2015 23:23:35">
+    <Property Name="ElementName" Value="[dbo].[Objekat].[Upotkrovlju]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Objekat]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="UPodkrovlju" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="01318d3d-b6d4-403f-812e-94a3efbf54b0" ChangeDateTime="05/18/2015 22:55:45">
+    <Property Name="ElementName" Value="[dbo].[Oglas].[MaxpovZakupa]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Oglas]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="MaxPovZakupa" />
+  </Operation>
+</Operations>

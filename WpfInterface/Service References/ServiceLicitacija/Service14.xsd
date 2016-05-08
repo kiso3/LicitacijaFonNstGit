@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:27169/Service1.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/ServiceProxies" />
+  <xs:element name="InsertLiceSoWcf">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/ServiceProxies" minOccurs="0" name="lice" nillable="true" type="q1:DTOLice" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertLiceSoWcfResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/ServiceProxies" minOccurs="0" name="InsertLiceSoWcfResult" nillable="true" type="q2:DTOLice" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteLiceSoWcf">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/ServiceProxies" minOccurs="0" name="lice" nillable="true" type="q3:DTOLice" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteLiceSoWcfResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/ServiceProxies" minOccurs="0" name="DeleteLiceSoWcfResult" nillable="true" type="q4:DTOLice" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AzurirajLiceSoWcf">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/ServiceProxies" minOccurs="0" name="lice" nillable="true" type="q5:DTOLice" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AzurirajLiceSoWcfResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/ServiceProxies" minOccurs="0" name="AzurirajLiceSoWcfResult" nillable="true" type="q6:DTOLice" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLiceSoWcf">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/ServiceProxies" minOccurs="0" name="lice" nillable="true" type="q7:DTOLice" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLiceSoWcfResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/ServiceProxies" minOccurs="0" name="GetLiceSoWcfResult" nillable="true" type="q8:DTOLice" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllLiceSoWcf">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/ServiceProxies" minOccurs="0" name="lice" nillable="true" type="q9:DTOLice" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllLiceSoWcfResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/ServiceProxies" minOccurs="0" name="GetAllLiceSoWcfResult" nillable="true" type="q10:DTOLice" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertFizickoSoWcf">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/ServiceProxies" minOccurs="0" name="fizicko" nillable="true" type="q11:DTOFizicko" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertFizickoSoWcfResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/ServiceProxies" minOccurs="0" name="InsertFizickoSoWcfResult" nillable="true" type="q12:DTOFizicko" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteFizickoSoWcf">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/ServiceProxies" minOccurs="0" name="fizicko" nillable="true" type="q13:DTOFizicko" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteFizickoSoWcfResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/ServiceProxies" minOccurs="0" name="DeleteFizickoSoWcfResult" nillable="true" type="q14:DTOFizicko" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AzurirajFizickoSoWcf">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/ServiceProxies" minOccurs="0" name="fizicko" nillable="true" type="q15:DTOFizicko" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AzurirajFizickoSoWcfResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/ServiceProxies" minOccurs="0" name="AzurirajFizickoSoWcfResult" nillable="true" type="q16:DTOFizicko" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFizickoSoWcf">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/ServiceProxies" minOccurs="0" name="fizicko" nillable="true" type="q17:DTOFizicko" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFizickoSoWcfResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/ServiceProxies" minOccurs="0" name="GetFizickoSoWcfResult" nillable="true" type="q18:DTOFizicko" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllFizickoSoWcf">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/ServiceProxies" minOccurs="0" name="fizicko" nillable="true" type="q19:DTOFizicko" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllFizickoSoWcfResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/ServiceProxies" minOccurs="0" name="GetAllFizickoSoWcfResult" nillable="true" type="q20:DTOFizicko" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertPravnoSoWcf">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/ServiceProxies" minOccurs="0" name="pravno" nillable="true" type="q21:DTOPravno" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertPravnoSoWcfResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/ServiceProxies" minOccurs="0" name="InsertPravnoSoWcfResult" nillable="true" type="q22:DTOPravno" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeletePravnoSoWcf">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/ServiceProxies" minOccurs="0" name="pravno" nillable="true" type="q23:DTOPravno" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeletePravnoSoWcfResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/ServiceProxies" minOccurs="0" name="DeletePravnoSoWcfResult" nillable="true" type="q24:DTOPravno" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AzurirajPravnoSoWcf">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q25="http://schemas.datacontract.org/2004/07/ServiceProxies" minOccurs="0" name="pravno" nillable="true" type="q25:DTOPravno" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AzurirajPravnoSoWcfResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q26="http://schemas.datacontract.org/2004/07/ServiceProxies" minOccurs="0" name="AzurirajPravnoSoWcfResult" nillable="true" type="q26:DTOPravno" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPravnoSoWcf">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q27="http://schemas.datacontract.org/2004/07/ServiceProxies" minOccurs="0" name="pravno" nillable="true" type="q27:DTOPravno" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPravnoSoWcfResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q28="http://schemas.datacontract.org/2004/07/ServiceProxies" minOccurs="0" name="GetPravnoSoWcfResult" nillable="true" type="q28:DTOPravno" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllPravnoSoWcf">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q29="http://schemas.datacontract.org/2004/07/ServiceProxies" minOccurs="0" name="pravno" nillable="true" type="q29:DTOPravno" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllPravnoSoWcfResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q30="http://schemas.datacontract.org/2004/07/ServiceProxies" minOccurs="0" name="GetAllPravnoSoWcfResult" nillable="true" type="q30:DTOPravno" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IsertMestoSoWcf">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q31="http://schemas.datacontract.org/2004/07/ServiceProxies" minOccurs="0" name="mesto" nillable="true" type="q31:DTOMesto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IsertMestoSoWcfResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q32="http://schemas.datacontract.org/2004/07/ServiceProxies" minOccurs="0" name="IsertMestoSoWcfResult" nillable="true" type="q32:DTOMesto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteMestoSoWcf">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q33="http://schemas.datacontract.org/2004/07/ServiceProxies" minOccurs="0" name="mesto" nillable="true" type="q33:DTOMesto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteMestoSoWcfResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q34="http://schemas.datacontract.org/2004/07/ServiceProxies" minOccurs="0" name="DeleteMestoSoWcfResult" nillable="true" type="q34:DTOMesto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AzurirajMestooSoWcf">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q35="http://schemas.datacontract.org/2004/07/ServiceProxies" minOccurs="0" name="mesto" nillable="true" type="q35:DTOMesto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AzurirajMestooSoWcfResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q36="http://schemas.datacontract.org/2004/07/ServiceProxies" minOccurs="0" name="AzurirajMestooSoWcfResult" nillable="true" type="q36:DTOMesto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMestoSoWcf">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q37="http://schemas.datacontract.org/2004/07/ServiceProxies" minOccurs="0" name="mesto" nillable="true" type="q37:DTOMesto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMestoSoWcfResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q38="http://schemas.datacontract.org/2004/07/ServiceProxies" minOccurs="0" name="GetMestoSoWcfResult" nillable="true" type="q38:DTOMesto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllMestoSoWcf">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q39="http://schemas.datacontract.org/2004/07/ServiceProxies" minOccurs="0" name="mesto" nillable="true" type="q39:DTOMesto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllMestoSoWcfResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q40="http://schemas.datacontract.org/2004/07/ServiceProxies" minOccurs="0" name="GetAllMestoSoWcfResult" nillable="true" type="q40:DTOMesto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllOglasSoWcf">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q41="http://schemas.datacontract.org/2004/07/ServiceProxies" minOccurs="0" name="oglas" nillable="true" type="q41:DTOOglas" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllOglasSoWcfResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q42="http://schemas.datacontract.org/2004/07/ServiceProxies" minOccurs="0" name="GetAllOglasSoWcfResult" nillable="true" type="q42:DTOOglas" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllResenjeSoWcf">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q43="http://schemas.datacontract.org/2004/07/ServiceProxies" minOccurs="0" name="resenje" nillable="true" type="q43:DTOResenje" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllResenjeSoWcfResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q44="http://schemas.datacontract.org/2004/07/ServiceProxies" minOccurs="0" name="GetAllResenjeSoWcfResult" nillable="true" type="q44:DTOResenje" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNadmetanjeSoWcf">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q45="http://schemas.datacontract.org/2004/07/ServiceProxies" minOccurs="0" name="nadmetaje" nillable="true" type="q45:DTONadmetanje" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNadmetanjeSoWcfResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q46="http://schemas.datacontract.org/2004/07/ServiceProxies" minOccurs="0" name="GetNadmetanjeSoWcfResult" nillable="true" type="q46:DTONadmetanje" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllNadmetanjeForOglasSoWcf">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q47="http://schemas.datacontract.org/2004/07/ServiceProxies" minOccurs="0" name="oglas" nillable="true" type="q47:DTOOglas" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllNadmetanjeForOglasSoWcfResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q48="http://schemas.datacontract.org/2004/07/ServiceProxies" minOccurs="0" name="GetAllNadmetanjeForOglasSoWcfResult" nillable="true" type="q48:DTONadmetanje" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertPrijavaSoWcf">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q49="http://schemas.datacontract.org/2004/07/ServiceProxies" minOccurs="0" name="prijava" nillable="true" type="q49:DTOPrijava" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertPrijavaSoWcfResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q50="http://schemas.datacontract.org/2004/07/ServiceProxies" minOccurs="0" name="InsertPrijavaSoWcfResult" nillable="true" type="q50:DTOPrijava" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeletePrijavaSoWcf">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q51="http://schemas.datacontract.org/2004/07/ServiceProxies" minOccurs="0" name="prijava" nillable="true" type="q51:DTOPrijava" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeletePrijavaSoWcfResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q52="http://schemas.datacontract.org/2004/07/ServiceProxies" minOccurs="0" name="DeletePrijavaSoWcfResult" nillable="true" type="q52:DTOPrijava" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AzurirajPrijavaSoWcf">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q53="http://schemas.datacontract.org/2004/07/ServiceProxies" minOccurs="0" name="prijava" nillable="true" type="q53:DTOPrijava" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AzurirajPrijavaSoWcfResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q54="http://schemas.datacontract.org/2004/07/ServiceProxies" minOccurs="0" name="AzurirajPrijavaSoWcfResult" nillable="true" type="q54:DTOPrijava" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllLiceForPrijavaSoWcf">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q55="http://schemas.datacontract.org/2004/07/ServiceProxies" minOccurs="0" name="nadmetanje" nillable="true" type="q55:DTONadmetanje" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllLiceForPrijavaSoWcfResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q56="http://schemas.datacontract.org/2004/07/ServiceProxies" minOccurs="0" name="GetAllLiceForPrijavaSoWcfResult" nillable="true" type="q56:DTOLice" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllPrijavaForNadmetanjeSoWcf">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q57="http://schemas.datacontract.org/2004/07/ServiceProxies" minOccurs="0" name="nadmetanje" nillable="true" type="q57:DTONadmetanje" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllPrijavaForNadmetanjeSoWcfResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q58="http://schemas.datacontract.org/2004/07/ServiceProxies" minOccurs="0" name="GetAllPrijavaForNadmetanjeSoWcfResult" nillable="true" type="q58:DTOPrijava" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

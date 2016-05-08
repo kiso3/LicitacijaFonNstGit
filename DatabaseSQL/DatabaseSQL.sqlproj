@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>DatabaseSQL</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{d4618a01-814c-444f-8122-cd6b565323d5}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql120DatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <RootNamespace>DatabaseSQL</RootNamespace>
+    <AssemblyName>DatabaseSQL</AssemblyName>
+    <ModelCollation>1033, CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetLanguage>CS</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>False</SqlServerVerification>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <!-- Default to the v11.0 targets path if the targets file for the current VS version is not found -->
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Condition="'$(SQLDBExtensionsRefPath)' != ''" Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties" />
+    <Folder Include="Ucenik" />
+    <Folder Include="ProstorniPodaci" />
+    <Folder Include="Vlasnistvo" />
+    <Folder Include="LicitacijaPriprema" />
+    <Folder Include="Licitacija" />
+    <Folder Include="dbo\" />
+    <Folder Include="Snapshots" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="Ucenik\Lice.sql" />
+    <Build Include="Ucenik\Fizicko.sql" />
+    <Build Include="Ucenik\Pravno.sql" />
+    <Build Include="Ucenik\Vlasnik.sql" />
+    <Build Include="Ucenik\Predstavik.sql" />
+    <Build Include="Ucenik\KontaksOsoba.sql" />
+    <Build Include="Ucenik\Komisija.sql" />
+    <Build Include="Ucenik\StrucnaSprema.sql" />
+    <Build Include="ProstorniPodaci\ProstorniEntitet.sql" />
+    <Build Include="ProstorniPodaci\Ko.sql" />
+    <Build Include="ProstorniPodaci\Parcela.sql" />
+    <Build Include="ProstorniPodaci\VrstaZemljista.sql" />
+    <Build Include="ProstorniPodaci\DeoParcele.sql" />
+    <Build Include="ProstorniPodaci\NacinKoriscenja.sql" />
+    <Build Include="ProstorniPodaci\Objekat.sql" />
+    <Build Include="ProstorniPodaci\PravniStatusObjekta.sql" />
+    <Build Include="ProstorniPodaci\NacinKoriscenjaObj.sql" />
+    <Build Include="ProstorniPodaci\DeloviObjekta.sql" />
+    <Build Include="ProstorniPodaci\Spratnost.sql" />
+    <Build Include="Vlasnistvo\UpisPrava.sql" />
+    <Build Include="Vlasnistvo\VlasnikNepo.sql" />
+    <Build Include="Vlasnistvo\Teret.sql" />
+    <Build Include="LicitacijaPriprema\Kompleks.sql" />
+    <Build Include="LicitacijaPriprema\KopleksProstorniEntitet.sql" />
+    <Build Include="LicitacijaPriprema\Opstina.sql" />
+    <Build Include="LicitacijaPriprema\Resenje.sql" />
+    <Build Include="LicitacijaPriprema\SluzbaKn.sql" />
+    <Build Include="LicitacijaPriprema\ZahtevZaPoljZem.sql" />
+    <Build Include="LicitacijaPriprema\KomisijaZaIzraduPonude.sql" />
+    <Build Include="LicitacijaPriprema\UlogaClanaKomisije.sql" />
+    <Build Include="LicitacijaPriprema\Oglas.sql" />
+    <Build Include="Licitacija\Prijava.sql" />
+    <Build Include="Licitacija\PrijavaFizicko.sql" />
+    <Build Include="Licitacija\PrijavaPravno.sql" />
+    <Build Include="Licitacija\Zapisnik.sql" />
+    <Build Include="Licitacija\ClanoviZapisnikKomisije.sql" />
+    <Build Include="Licitacija\Ugovor.sql" />
+    <Build Include="Licitacija\Garancije.sql" />
+    <Build Include="LicitacijaPriprema\Nadmetanje.sql" />
+    <Build Include="ProstorniPodaci\NacinKoriscenjaDelaObj.sql" />
+    <Build Include="Vlasnistvo\VrstaPrava.sql" />
+    <Build Include="Vlasnistvo\OblikSvojine.sql" />
+    <Build Include="Vlasnistvo\VrstaTereta.sql" />
+    <Build Include="Licitacija\PrijavaUZapisniku.sql" />
+    <Build Include="Licitacija\IzreceneMere.sql" />
+    <Build Include="Ucenik\Mesto.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <RefactorLog Include="LicitacijaFonNstV3.refactorlog" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Snapshots\DatabaseSLQ_20150621_16-59-46.dacpac" />
+    <None Include="LicitacijaFonNstV5.publish.publish.xml" />
+    <None Include="Snapshots\DatabaseSLQ_20150621_21-48-46.dacpac" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/ServiceProxies" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/ServiceProxies" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:27169/Service1.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/DomenskeKlase.Ucenik" />
+  <xs:import schemaLocation="http://localhost:27169/Service1.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/DomenskeKlase.LicitacijaPriprema" />
+  <xs:import schemaLocation="http://localhost:27169/Service1.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/DomenskeKlase.Licitacija" />
+  <xs:complexType name="DTOLice">
+    <xs:sequence>
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/DomenskeKlase.Ucenik" minOccurs="0" name="liceOdgovor" nillable="true" type="q1:Lice" />
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/DomenskeKlase.Ucenik" minOccurs="0" name="liceOdgovorList" nillable="true" type="q2:ArrayOfLice" />
+      <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/DomenskeKlase.Ucenik" minOccurs="0" name="liceZahtev" nillable="true" type="q3:Lice" />
+      <xs:element minOccurs="0" name="poruka" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DTOLice" nillable="true" type="tns:DTOLice" />
+  <xs:complexType name="DTOFizicko">
+    <xs:sequence>
+      <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/DomenskeKlase.Ucenik" minOccurs="0" name="fizickoOdgovor" nillable="true" type="q4:Fizicko" />
+      <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/DomenskeKlase.Ucenik" minOccurs="0" name="fizickoOdgovorList" nillable="true" type="q5:ArrayOfFizicko" />
+      <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/DomenskeKlase.Ucenik" minOccurs="0" name="fizickoZahtev" nillable="true" type="q6:Fizicko" />
+      <xs:element minOccurs="0" name="poruka" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DTOFizicko" nillable="true" type="tns:DTOFizicko" />
+  <xs:complexType name="DTOPravno">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="poruka" nillable="true" type="xs:string" />
+      <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/DomenskeKlase.Ucenik" minOccurs="0" name="pravnoOdgovor" nillable="true" type="q7:Pravno" />
+      <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/DomenskeKlase.Ucenik" minOccurs="0" name="pravnoOdgovorList" nillable="true" type="q8:ArrayOfPravno" />
+      <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/DomenskeKlase.Ucenik" minOccurs="0" name="pravnoZahtev" nillable="true" type="q9:Pravno" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DTOPravno" nillable="true" type="tns:DTOPravno" />
+  <xs:complexType name="DTOMesto">
+    <xs:sequence>
+      <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/DomenskeKlase.Ucenik" minOccurs="0" name="mestoOdgovor" nillable="true" type="q10:Mesto" />
+      <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/DomenskeKlase.Ucenik" minOccurs="0" name="mestoOdgovorList" nillable="true" type="q11:ArrayOfMesto" />
+      <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/DomenskeKlase.Ucenik" minOccurs="0" name="mestoZahtev" nillable="true" type="q12:Mesto" />
+      <xs:element minOccurs="0" name="poruka" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DTOMesto" nillable="true" type="tns:DTOMesto" />
+  <xs:complexType name="DTOOglas">
+    <xs:sequence>
+      <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/DomenskeKlase.LicitacijaPriprema" minOccurs="0" name="oglasOdgovor" nillable="true" type="q13:Oglas" />
+      <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/DomenskeKlase.LicitacijaPriprema" minOccurs="0" name="oglasOdgovorList" nillable="true" type="q14:ArrayOfOglas" />
+      <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/DomenskeKlase.LicitacijaPriprema" minOccurs="0" name="oglasZahtev" nillable="true" type="q15:Oglas" />
+      <xs:element minOccurs="0" name="poruka" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DTOOglas" nillable="true" type="tns:DTOOglas" />
+  <xs:complexType name="DTOResenje">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="poruka" nillable="true" type="xs:string" />
+      <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/DomenskeKlase.LicitacijaPriprema" minOccurs="0" name="resenjeOdgovor" nillable="true" type="q16:Resenje" />
+      <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/DomenskeKlase.LicitacijaPriprema" minOccurs="0" name="resenjeOdgovorList" nillable="true" type="q17:ArrayOfResenje" />
+      <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/DomenskeKlase.LicitacijaPriprema" minOccurs="0" name="resenjeZahtev" nillable="true" type="q18:Resenje" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DTOResenje" nillable="true" type="tns:DTOResenje" />
+  <xs:complexType name="DTONadmetanje">
+    <xs:sequence>
+      <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/DomenskeKlase.LicitacijaPriprema" minOccurs="0" name="nadmetanjeOdgovor" nillable="true" type="q19:Nadmetanje" />
+      <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/DomenskeKlase.LicitacijaPriprema" minOccurs="0" name="nadmetanjeOdgovorList" nillable="true" type="q20:ArrayOfNadmetanje" />
+      <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/DomenskeKlase.LicitacijaPriprema" minOccurs="0" name="nadmetanjeZahtev" nillable="true" type="q21:Nadmetanje" />
+      <xs:element minOccurs="0" name="poruka" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DTONadmetanje" nillable="true" type="tns:DTONadmetanje" />
+  <xs:complexType name="DTOPrijava">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="poruka" nillable="true" type="xs:string" />
+      <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/DomenskeKlase.Licitacija" minOccurs="0" name="prijavaOdgovor" nillable="true" type="q22:Prijava" />
+      <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/DomenskeKlase.Licitacija" minOccurs="0" name="prijavaOdgovorList" nillable="true" type="q23:ArrayOfPrijava" />
+      <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/DomenskeKlase.Licitacija" minOccurs="0" name="prijavaZahtev" nillable="true" type="q24:Prijava" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DTOPrijava" nillable="true" type="tns:DTOPrijava" />
+</xs:schema>

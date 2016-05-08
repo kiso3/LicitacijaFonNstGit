@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/DomenskeKlase.LicitacijaPriprema" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/DomenskeKlase.LicitacijaPriprema" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:27169/Service1.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:import schemaLocation="http://localhost:27169/Service1.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/DomenskeKlase.Licitacija" />
+  <xs:import schemaLocation="http://localhost:27169/Service1.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/DomenskeKlase.Ucenik" />
+  <xs:complexType name="Oglas">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DatumObjave" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="MaxpovZakupa" type="xs:int" />
+      <xs:element minOccurs="0" name="NadmetanjeList" nillable="true" type="tns:ArrayOfNadmetanje" />
+      <xs:element minOccurs="0" name="OglasId" type="xs:int" />
+      <xs:element minOccurs="0" name="Resenje" nillable="true" type="tns:Resenje" />
+    </xs:sequence>
+    <xs:attribute ref="ser:Id" />
+    <xs:attribute ref="ser:Ref" />
+  </xs:complexType>
+  <xs:element name="Oglas" nillable="true" type="tns:Oglas" />
+  <xs:complexType name="ArrayOfNadmetanje">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Nadmetanje" nillable="true" type="tns:Nadmetanje" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfNadmetanje" nillable="true" type="tns:ArrayOfNadmetanje" />
+  <xs:complexType name="Nadmetanje">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DatumNadmetanja" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Depozit" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Kompleks" nillable="true" type="tns:Kompleks" />
+      <xs:element minOccurs="0" name="NadmetanjeId" type="xs:int" />
+      <xs:element minOccurs="0" name="Oglas" nillable="true" type="tns:Oglas" />
+      <xs:element minOccurs="0" name="OznakaNadmetanja" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PeriodZakupa" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="PocetnaCena" type="xs:decimal" />
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/DomenskeKlase.Licitacija" minOccurs="0" name="PrijavaList" nillable="true" type="q1:ArrayOfPrijava" />
+    </xs:sequence>
+    <xs:attribute ref="ser:Id" />
+    <xs:attribute ref="ser:Ref" />
+  </xs:complexType>
+  <xs:element name="Nadmetanje" nillable="true" type="tns:Nadmetanje" />
+  <xs:complexType name="Kompleks">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DatumKreiranja" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="KompleksId" type="xs:int" />
+      <xs:element minOccurs="0" name="Nadmetanje" nillable="true" type="tns:ArrayOfNadmetanje" />
+      <xs:element minOccurs="0" name="Povrsina" type="xs:int" />
+      <xs:element minOccurs="0" name="PovrsinaPodObj" type="xs:int" />
+    </xs:sequence>
+    <xs:attribute ref="ser:Id" />
+    <xs:attribute ref="ser:Ref" />
+  </xs:complexType>
+  <xs:element name="Kompleks" nillable="true" type="tns:Kompleks" />
+  <xs:complexType name="ArrayOfKomisijaZaIzraduPonude">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="KomisijaZaIzraduPonude" nillable="true" type="tns:KomisijaZaIzraduPonude" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfKomisijaZaIzraduPonude" nillable="true" type="tns:ArrayOfKomisijaZaIzraduPonude" />
+  <xs:complexType name="KomisijaZaIzraduPonude">
+    <xs:sequence>
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/DomenskeKlase.Ucenik" minOccurs="0" name="Komisija" nillable="true" type="q2:Komisija" />
+      <xs:element minOccurs="0" name="KomisijaId" type="xs:int" />
+      <xs:element minOccurs="0" name="KomisijaZaIzraduPonudeId" type="xs:int" />
+      <xs:element minOccurs="0" name="Resenje" nillable="true" type="tns:Resenje" />
+      <xs:element minOccurs="0" name="ResenjeId" type="xs:int" />
+      <xs:element minOccurs="0" name="UlogaClanaKomisije" nillable="true" type="tns:UlogaClanaKomisije" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="KomisijaZaIzraduPonude" nillable="true" type="tns:KomisijaZaIzraduPonude" />
+  <xs:complexType name="Resenje">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ClasnStatuta" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DarumIzradeResenja" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DaumSednice" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Oglas" nillable="true" type="tns:Oglas" />
+      <xs:element minOccurs="0" name="ResenjeId" type="xs:int" />
+      <xs:element minOccurs="0" name="SluzbeniListBr" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TekstOdluke" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ZaGodinu" type="xs:dateTime" />
+    </xs:sequence>
+    <xs:attribute ref="ser:Id" />
+    <xs:attribute ref="ser:Ref" />
+  </xs:complexType>
+  <xs:element name="Resenje" nillable="true" type="tns:Resenje" />
+  <xs:complexType name="UlogaClanaKomisije">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Naziv" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UlogaClanaKomisijeId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UlogaClanaKomisije" nillable="true" type="tns:UlogaClanaKomisije" />
+  <xs:complexType name="ArrayOfOglas">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Oglas" nillable="true" type="tns:Oglas" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfOglas" nillable="true" type="tns:ArrayOfOglas" />
+  <xs:complexType name="ArrayOfResenje">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Resenje" nillable="true" type="tns:Resenje" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfResenje" nillable="true" type="tns:ArrayOfResenje" />
+</xs:schema>

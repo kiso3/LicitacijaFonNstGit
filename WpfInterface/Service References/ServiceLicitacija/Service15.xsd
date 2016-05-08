@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/DomenskeKlase.Ucenik" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/DomenskeKlase.Ucenik" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:27169/Service1.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/DomenskeKlase.Licitacija" />
+  <xs:import schemaLocation="http://localhost:27169/Service1.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/DomenskeKlase.LicitacijaPriprema" />
+  <xs:complexType name="Lice">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Adresa" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LiceId" type="xs:int" />
+      <xs:element minOccurs="0" name="Mesto" nillable="true" type="tns:Mesto" />
+      <xs:element minOccurs="0" name="Pib" type="xs:int" />
+      <xs:element minOccurs="0" name="Telefon" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Lice" nillable="true" type="tns:Lice" />
+  <xs:complexType name="Mesto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="MestoId" type="xs:int" />
+      <xs:element minOccurs="0" name="Naziv" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Mesto" nillable="true" type="tns:Mesto" />
+  <xs:complexType name="ArrayOfLice">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Lice" nillable="true" type="tns:Lice" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfLice" nillable="true" type="tns:ArrayOfLice" />
+  <xs:complexType name="Pravno">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Lice">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Mb" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Naziv" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Pravno" nillable="true" type="tns:Pravno" />
+  <xs:complexType name="Fizicko">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Lice">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Ime" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ImeRoditelja" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Jmbg" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Prezime" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Fizicko" nillable="true" type="tns:Fizicko" />
+  <xs:complexType name="ArrayOfFizicko">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Fizicko" nillable="true" type="tns:Fizicko" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfFizicko" nillable="true" type="tns:ArrayOfFizicko" />
+  <xs:complexType name="ArrayOfPravno">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Pravno" nillable="true" type="tns:Pravno" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPravno" nillable="true" type="tns:ArrayOfPravno" />
+  <xs:complexType name="ArrayOfMesto">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Mesto" nillable="true" type="tns:Mesto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMesto" nillable="true" type="tns:ArrayOfMesto" />
+  <xs:complexType name="Predstavnik">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Fizicko">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Predstavnik" nillable="true" type="tns:Predstavnik" />
+  <xs:complexType name="Komisija">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Fizicko">
+        <xs:sequence>
+          <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/DomenskeKlase.Licitacija" minOccurs="0" name="ClanoviZapisnikKomisija" nillable="true" type="q1:ArrayOfClanoviZapisnikKomisija" />
+          <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/DomenskeKlase.LicitacijaPriprema" minOccurs="0" name="KomisijaZaIzraduPonude" nillable="true" type="q2:ArrayOfKomisijaZaIzraduPonude" />
+          <xs:element minOccurs="0" name="StrucnaSprema" nillable="true" type="tns:StrucnaSprema" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Komisija" nillable="true" type="tns:Komisija" />
+  <xs:complexType name="StrucnaSprema">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Naziv" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrucnaSpremaId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="StrucnaSprema" nillable="true" type="tns:StrucnaSprema" />
+</xs:schema>

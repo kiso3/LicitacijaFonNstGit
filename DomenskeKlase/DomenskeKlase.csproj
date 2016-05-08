@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DD7B5158-2DE1-4E7B-A6DC-E0069DEFFB07}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DomenskeKlase</RootNamespace>
+    <AssemblyName>DomenskeKlase</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Konstante.cs" />
+    <Compile Include="LicitacijaPriprema\KomisijaZaIzraduPonude.cs" />
+    <Compile Include="LicitacijaPriprema\Kompleks.cs" />
+    <Compile Include="LicitacijaPriprema\Nadmetanje.cs" />
+    <Compile Include="LicitacijaPriprema\Oglas.cs" />
+    <Compile Include="LicitacijaPriprema\Resenje.cs" />
+    <Compile Include="LicitacijaPriprema\SluzbaKn.cs" />
+    <Compile Include="LicitacijaPriprema\UlogaClanaKomisije.cs" />
+    <Compile Include="LicitacijaPriprema\ZahtevZaPoljZemlj.cs" />
+    <Compile Include="Licitacija\Garancije.cs" />
+    <Compile Include="Licitacija\ClanoviZapisnikKomisija.cs" />
+    <Compile Include="Licitacija\IzreceneMere.cs" />
+    <Compile Include="Licitacija\Prijava.cs" />
+    <Compile Include="Licitacija\PrijavaFizicko.cs" />
+    <Compile Include="Licitacija\PrijavaPravno.cs" />
+    <Compile Include="Licitacija\PrijavaUZapisniku.cs" />
+    <Compile Include="Licitacija\Ugovor.cs" />
+    <Compile Include="Licitacija\Zapisnik.cs" />
+    <Compile Include="Model\Ucesnik\Fizicko.cs" />
+    <Compile Include="Model\Ucesnik\Lice.cs" />
+    <Compile Include="Model\Ucesnik\Pravno.cs" />
+    <Compile Include="ProstorniPodaci\DeloviObjekta.cs" />
+    <Compile Include="ProstorniPodaci\DeoParcele.cs" />
+    <Compile Include="ProstorniPodaci\Ko.cs" />
+    <Compile Include="ProstorniPodaci\NacinKoriscenja.cs" />
+    <Compile Include="ProstorniPodaci\NacinKoriscenjaDelaObj.cs" />
+    <Compile Include="ProstorniPodaci\NacinKoriscenjaObj.cs" />
+    <Compile Include="ProstorniPodaci\Objekat.cs" />
+    <Compile Include="ProstorniPodaci\Parcela.cs" />
+    <Compile Include="ProstorniPodaci\ProstorniEntitet.cs" />
+    <Compile Include="ProstorniPodaci\Spratnost.cs" />
+    <Compile Include="ProstorniPodaci\VrstaZemljista.cs" />
+    <Compile Include="Ucenik\Fizicko.cs" />
+    <Compile Include="Ucenik\Komisija.cs" />
+    <Compile Include="Ucenik\KontaktOsoba.cs" />
+    <Compile Include="Ucenik\Lice.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Ucenik\Mesto.cs" />
+    <Compile Include="ProstorniPodaci\PravniStatusObj.cs" />
+    <Compile Include="Ucenik\Pravno.cs" />
+    <Compile Include="Ucenik\Predstavnik.cs" />
+    <Compile Include="Ucenik\StrucnaSprema.cs" />
+    <Compile Include="Ucenik\Vlasnik.cs" />
+    <Compile Include="Vlasnistvo\OblikSvojine.cs" />
+    <Compile Include="Vlasnistvo\Teret.cs" />
+    <Compile Include="Vlasnistvo\UpisPrava.cs" />
+    <Compile Include="Vlasnistvo\VlsnikNepo.cs" />
+    <Compile Include="Vlasnistvo\VrstaPrava.cs" />
+    <Compile Include="Vlasnistvo\VrstaTereta.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="ClassDiagram.cd" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

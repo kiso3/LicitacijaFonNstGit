@@ -1,0 +1,625 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Class Name="DomenskeKlase.ProstorniPodaci.DeloviObjekta">
+    <Position X="41.5" Y="28.25" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>QABAAEgCAAACAAAAAAAACACAAAAAEAAAAGAAAAAAAAA=</HashCode>
+      <FileName>ProstorniPodaci\DeloviObjekta.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="NacinKoriscenjaDelaObj" />
+      <Property Name="Spratnost" />
+      <Property Name="Objekat" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="DomenskeKlase.ProstorniPodaci.DeoParcele">
+    <Position X="34.75" Y="28.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAADACAAkAAAAAAAAAACAAAAAAAAAAAAAAAAAAAIA=</HashCode>
+      <FileName>ProstorniPodaci\DeoParcele.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="NacinKoriscenja" />
+      <Property Name="Parcela" />
+      <Property Name="Objekat" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="DomenskeKlase.ProstorniPodaci.Ko">
+    <Position X="27.75" Y="28.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAAAAIAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ProstorniPodaci\Ko.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Parcela" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="DomenskeKlase.ProstorniPodaci.NacinKoriscenja" Collapsed="true">
+    <Position X="35.25" Y="31.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEA=</HashCode>
+      <FileName>ProstorniPodaci\NacinKoriscenja.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DomenskeKlase.ProstorniPodaci.NacinKoriscenjaDelaObj" Collapsed="true">
+    <Position X="42.75" Y="33.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAA=</HashCode>
+      <FileName>ProstorniPodaci\NacinKoriscenjaDelaObj.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DomenskeKlase.ProstorniPodaci.NacinKoriscenjaObj" Collapsed="true">
+    <Position X="38.25" Y="31.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAA=</HashCode>
+      <FileName>ProstorniPodaci\NacinKoriscenjaObj.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DomenskeKlase.ProstorniPodaci.Objekat">
+    <Position X="38.25" Y="28.25" Width="2" />
+    <AssociationLine Name="NacinKoriscenjaObj" Type="DomenskeKlase.ProstorniPodaci.NacinKoriscenjaObj" FixedToPoint="true">
+      <Path>
+        <Point X="39" Y="30.829" />
+        <Point X="39" Y="31.75" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>IAAgAAAAAAEEAQAAAQAAAAAgEAQEEAAAAIAAAAAAAAA=</HashCode>
+      <FileName>ProstorniPodaci\Objekat.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="NacinKoriscenjaObj" />
+      <Property Name="PravniStatusObj" />
+      <Property Name="DeoParcele" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="DeloviObjekta" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="DomenskeKlase.ProstorniPodaci.Parcela">
+    <Position X="31.25" Y="28.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAwAAAgAAgAAAAAAAAAEAAAAAABAAAAAAAAAAAIAIA=</HashCode>
+      <FileName>ProstorniPodaci\Parcela.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="VrstaZemljista" />
+      <Property Name="Ko" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="DeoParcele" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="DomenskeKlase.ProstorniPodaci.PravniStatusObj" Collapsed="true">
+    <Position X="39" Y="33" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAARAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ProstorniPodaci\PravniStatusObj.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DomenskeKlase.ProstorniPodaci.ProstorniEntitet">
+    <Position X="35" Y="25.75" Width="1.5" />
+    <AssociationLine Name="UpisPrava" Type="DomenskeKlase.Vlasnistvo.UpisPrava" FixedFromPoint="true">
+      <Path>
+        <Point X="35" Y="26.324" />
+        <Point X="29.5" Y="26.324" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="Nadredjeni" Type="DomenskeKlase.ProstorniPodaci.ProstorniEntitet" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="35" Y="26" />
+        <Point X="33.974" Y="26" />
+        <Point X="33.974" Y="24.614" />
+        <Point X="35.312" Y="24.614" />
+        <Point X="35.312" Y="25.75" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.264" Y="0.449" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="Podredjeni" Type="DomenskeKlase.ProstorniPodaci.ProstorniEntitet" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="36.5" Y="25.812" />
+        <Point X="37.674" Y="25.812" />
+        <Point X="37.674" Y="24.655" />
+        <Point X="36.103" Y="24.655" />
+        <Point X="36.103" Y="25.75" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-2.173" Y="0.359" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAABAIAAAAAgCQAAAAAAAAAAAAEAAAAAAA=</HashCode>
+      <FileName>ProstorniPodaci\ProstorniEntitet.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Nadredjeni" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="UpisPrava" />
+      <Property Name="Kompleks" />
+      <Property Name="Podredjeni" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="DomenskeKlase.ProstorniPodaci.Spratnost" Collapsed="true">
+    <Position X="41.5" Y="31.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ProstorniPodaci\Spratnost.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DomenskeKlase.ProstorniPodaci.VrstaZemljista" Collapsed="true">
+    <Position X="32.75" Y="31.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ProstorniPodaci\VrstaZemljista.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DomenskeKlase.Ucenik.Fizicko">
+    <Position X="26.75" Y="14.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAQAAABAAAgAAEBAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Ucenik\Fizicko.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DomenskeKlase.Ucenik.Komisija">
+    <Position X="28.75" Y="19" Width="1.5" />
+    <AssociationLine Name="StrucnaSprema" Type="DomenskeKlase.Ucenik.StrucnaSprema" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="30" Y="19" />
+        <Point X="30" Y="18.75" />
+        <Point X="32" Y="18.75" />
+        <Point X="32" Y="18.562" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="ClanoviZapisnikKomisija" Type="DomenskeKlase.Licitacija.ClanoviZapisnikKomisija" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="30.25" Y="19.438" />
+        <Point X="38.594" Y="19.438" />
+        <Point X="38.594" Y="15.618" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="KomisijaZaIzraduPonude" Type="DomenskeKlase.LicitacijaPriprema.KomisijaZaIzraduPonude" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="28.75" Y="19.787" />
+        <Point X="23.568" Y="19.787" Type="JumpStart" />
+        <Point X="23.401" Y="19.787" Type="JumpEnd" />
+        <Point X="23.052" Y="19.787" Type="JumpStart" />
+        <Point X="22.886" Y="19.787" Type="JumpEnd" />
+        <Point X="18.305" Y="19.787" />
+        <Point X="18.305" Y="7.466" />
+        <Point X="62.225" Y="7.466" />
+        <Point X="62.225" Y="26" />
+        <Point X="60.034" Y="26" Type="JumpStart" />
+        <Point X="59.868" Y="26" Type="JumpEnd" />
+        <Point X="58.489" Y="26" Type="JumpStart" />
+        <Point X="58.323" Y="26" Type="JumpEnd" />
+        <Point X="51" Y="26" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAACAAABA=</HashCode>
+      <FileName>Ucenik\Komisija.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="StrucnaSprema" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="ClanoviZapisnikKomisija" />
+      <Property Name="KomisijaZaIzraduPonude" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="DomenskeKlase.Ucenik.KontaktOsoba">
+    <Position X="26.75" Y="18.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Ucenik\KontaktOsoba.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DomenskeKlase.Ucenik.Ponudjac">
+    <Position X="32.75" Y="14.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Ucenik\Ponudjac.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DomenskeKlase.Ucenik.Pravno">
+    <Position X="29.75" Y="14.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAAAAAAAAAAAAgAAgAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Ucenik\Pravno.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DomenskeKlase.Ucenik.Predstavnik">
+    <Position X="24.25" Y="17" Width="1.5" />
+    <AssociationLine Name="Prijava" Type="DomenskeKlase.Licitacija.Prijava" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="24.25" Y="17.688" />
+        <Point X="23.568" Y="17.688" Type="JumpStart" />
+        <Point X="23.401" Y="17.688" Type="JumpEnd" />
+        <Point X="23.052" Y="17.688" Type="JumpStart" />
+        <Point X="22.886" Y="17.688" Type="JumpEnd" />
+        <Point X="21.406" Y="17.688" />
+        <Point X="21.406" Y="9.168" />
+        <Point X="57.606" Y="9.168" />
+        <Point X="57.606" Y="17.125" />
+        <Point X="55.75" Y="17.125" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Ucenik\Predstavnik.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Prijava" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="DomenskeKlase.Ucenik.StrucnaSprema" Collapsed="true">
+    <Position X="31.25" Y="18" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAAAAAAAAAIAAAAAAAAAAAAAAQAAAAAAAAAAAA=</HashCode>
+      <FileName>Ucenik\StrucnaSprema.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DomenskeKlase.Ucenik.Vlasnik">
+    <Position X="22.5" Y="14.5" Width="1.5" />
+    <InheritanceLine Type="DomenskeKlase.Lice" FixedToPoint="true">
+      <Path>
+        <Point X="28.75" Y="13.373" />
+        <Point X="28.75" Y="13.875" />
+        <Point X="23.25" Y="13.875" />
+        <Point X="23.25" Y="14.5" />
+      </Path>
+    </InheritanceLine>
+    <AssociationLine Name="UpisPrava" Type="DomenskeKlase.Vlasnistvo.UpisPrava" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="22.969" Y="15.733" />
+        <Point X="22.969" Y="26.875" />
+        <Point X="28" Y="26.875" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Ucenik\Vlasnik.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="UpisPrava" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="DomenskeKlase.Lice">
+    <Position X="28" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAACAAAAAAAAAAgAAAAAAAAAAAABAAA=</HashCode>
+      <FileName>Ucenik\Lice.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DomenskeKlase.LicitacijaPriprema.KomisijaZaIzraduPonude">
+    <Position X="49.5" Y="25.5" Width="1.5" />
+    <AssociationLine Name="UlogaClanaKomisije" Type="DomenskeKlase.LicitacijaPriprema.UlogaClanaKomisije" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="50.188" Y="25.5" />
+        <Point X="50.188" Y="24.562" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="Komisija" Type="DomenskeKlase.Ucenik.Komisija" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="51" Y="26.375" />
+        <Point X="58.323" Y="26.375" Type="JumpStart" />
+        <Point X="58.489" Y="26.375" Type="JumpEnd" />
+        <Point X="59.951" Y="26.375" />
+        <Point X="59.951" Y="23.472" />
+        <Point X="59.865" Y="23.472" />
+        <Point X="59.865" Y="8.052" />
+        <Point X="18.966" Y="8.052" />
+        <Point X="18.966" Y="19.438" />
+        <Point X="22.886" Y="19.438" Type="JumpStart" />
+        <Point X="23.052" Y="19.438" Type="JumpEnd" />
+        <Point X="23.401" Y="19.438" Type="JumpStart" />
+        <Point X="23.568" Y="19.438" Type="JumpEnd" />
+        <Point X="28.75" Y="19.438" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAIAAAABAgAAAAAAAAACAAAAAIAAAQ=</HashCode>
+      <FileName>LicitacijaPriprema\KomisijaZaIzraduPonude.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="UlogaClanaKomisije" />
+      <Property Name="Resenje" />
+      <Property Name="Komisija" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="DomenskeKlase.LicitacijaPriprema.Kompleks">
+    <Position X="41" Y="25.25" Width="1.5" />
+    <AssociationLine Name="Nadmetanje" Type="DomenskeKlase.LicitacijaPriprema.Nadmetanje" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="41.25" Y="25.25" />
+        <Point X="41.25" Y="18.532" />
+        <Point X="45" Y="18.532" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACAAAAAAAIhAAABAQAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>LicitacijaPriprema\Kompleks.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="ProstorniEntitet" />
+      <Property Name="Nadmetanje" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="DomenskeKlase.LicitacijaPriprema.Resenje">
+    <Position X="45.25" Y="27.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAAAEAAgAAgAAAEAQAAAAAAAAQAAAAAAAAAEQ=</HashCode>
+      <FileName>LicitacijaPriprema\Resenje.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="ZahtevZaPoljZemlj" />
+      <Property Name="Oglas" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="KomisijaZaIzraduPonude" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="DomenskeKlase.LicitacijaPriprema.SluzbaKn" Collapsed="true">
+    <Position X="57.5" Y="31" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>LicitacijaPriprema\SluzbaKn.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DomenskeKlase.LicitacijaPriprema.UlogaClanaKomisije" Collapsed="true">
+    <Position X="49.5" Y="24" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>LicitacijaPriprema\UlogaClanaKomisije.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DomenskeKlase.LicitacijaPriprema.ZahtevZaPoljZemlj">
+    <Position X="57" Y="28" Width="2" />
+    <AssociationLine Name="KontaktOsoba" Type="DomenskeKlase.Ucenik.KontaktOsoba" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="58.406" Y="28" />
+        <Point X="58.406" Y="8.467" />
+        <Point X="20.216" Y="8.467" />
+        <Point X="20.216" Y="18.75" />
+        <Point X="22.886" Y="18.75" Type="JumpStart" />
+        <Point X="23.052" Y="18.75" Type="JumpEnd" />
+        <Point X="23.401" Y="18.75" Type="JumpStart" />
+        <Point X="23.568" Y="18.75" Type="JumpEnd" />
+        <Point X="26.75" Y="18.75" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>EAAACAAAAAAAAgAAAAAAAAMAAAAAAAAAAAgIAABAAAQ=</HashCode>
+      <FileName>LicitacijaPriprema\ZahtevZaPoljZemlj.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Resnje" />
+      <Property Name="SluzbaKn" />
+      <Property Name="KontaktOsoba" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="DomenskeKlase.Vlasnistvo.OblikSvojine" Collapsed="true">
+    <Position X="32.25" Y="22.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Vlasnistvo\OblikSvojine.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DomenskeKlase.Vlasnistvo.Teret">
+    <Position X="26.75" Y="22.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAAAAAAABABAAAAAAAAAAAAAAAQAAAAAAg=</HashCode>
+      <FileName>Vlasnistvo\Teret.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Vrstatereta" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="DomenskeKlase.Vlasnistvo.UpisPrava">
+    <Position X="28" Y="25.75" Width="1.5" />
+    <AssociationLine Name="ProstorniEntitet" Type="DomenskeKlase.ProstorniPodaci.ProstorniEntitet" FixedToPoint="true">
+      <Path>
+        <Point X="29.5" Y="26.827" />
+        <Point X="35" Y="26.827" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="Vlasnik" Type="DomenskeKlase.Ucenik.Vlasnik">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.456" Y="0.271" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACAAAAAAAGAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Vlasnistvo\UpisPrava.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="ProstorniEntitet" />
+      <Property Name="Vlasnik" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="DomenskeKlase.Vlasnistvo.VlsnikNepo">
+    <Position X="29.25" Y="22.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAACAIAAAAEAAAAIAAAAA=</HashCode>
+      <FileName>Vlasnistvo\VlsnikNepo.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="VrstaPrava" />
+      <Property Name="OblikSvojine" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="DomenskeKlase.Vlasnistvo.VrstaPrava" Collapsed="true">
+    <Position X="32.25" Y="23.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAA=</HashCode>
+      <FileName>Vlasnistvo\VrstaPrava.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DomenskeKlase.Vlasnistvo.VrstaTereta" Collapsed="true">
+    <Position X="24" Y="23.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAA=</HashCode>
+      <FileName>Vlasnistvo\VrstaTereta.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DomenskeKlase.LicitacijaPriprema.Oglas">
+    <Position X="45.25" Y="23.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAAAAAAAAAAAAIAAAAARAAAAAACAAAAAAAAAA=</HashCode>
+      <FileName>LicitacijaPriprema\Oglas.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Resenje" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="Nadmetanje" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="DomenskeKlase.LicitacijaPriprema.Nadmetanje">
+    <Position X="45" Y="17.5" Width="2" />
+    <AssociationLine Name="Kompleks" Type="DomenskeKlase.LicitacijaPriprema.Kompleks" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="45" Y="19.062" />
+        <Point X="42.125" Y="19.062" />
+        <Point X="42.125" Y="25.25" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="Zapisnik" Type="DomenskeKlase.Licitacija.Zapisnik" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="46.562" Y="17.5" />
+        <Point X="46.562" Y="13.83" />
+        <Point X="43.75" Y="13.83" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAgAAAEDIAAAAABAAQAAAAQAAAAAAAAQAAAAIAAAAAA=</HashCode>
+      <FileName>LicitacijaPriprema\Nadmetanje.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Oglas" />
+      <Property Name="Kompleks" />
+      <Property Name="Zapisnik" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="Prijave" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="DomenskeKlase.Licitacija.Prijava">
+    <Position X="53.25" Y="15.75" Width="2.5" />
+    <AssociationLine Name="Predstavnik" Type="DomenskeKlase.Ucenik.Predstavnik" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="55.75" Y="16.5" />
+        <Point X="56.866" Y="16.5" />
+        <Point X="56.866" Y="15.375" />
+        <Point X="56.768" Y="15.375" />
+        <Point X="56.768" Y="9.667" />
+        <Point X="21.931" Y="9.667" />
+        <Point X="21.931" Y="17.375" />
+        <Point X="22.886" Y="17.375" Type="JumpStart" />
+        <Point X="23.052" Y="17.375" Type="JumpEnd" />
+        <Point X="23.401" Y="17.375" Type="JumpStart" />
+        <Point X="23.568" Y="17.375" Type="JumpEnd" />
+        <Point X="24.25" Y="17.375" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAAAIAAAAAAAKAAFAAAAEAAACAAgAAAQAQoA=</HashCode>
+      <FileName>Licitacija\Prijava.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Ponudjac" />
+      <Property Name="Predstavnik" />
+      <Property Name="Nadmetanje" />
+      <Property Name="PrijavaUZapisniku" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="DomenskeKlase.Licitacija.PrijavaFizicko">
+    <Position X="54.75" Y="19.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAA=</HashCode>
+      <FileName>Licitacija\PrijavaFizicko.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DomenskeKlase.Licitacija.PrijavaPravno">
+    <Position X="52.25" Y="19.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Licitacija\PrijavaPravno.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DomenskeKlase.Licitacija.IzreceneMere" Collapsed="true">
+    <Position X="52" Y="12" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Licitacija\IzreceneMere.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DomenskeKlase.Licitacija.Zapisnik">
+    <Position X="42.25" Y="12.25" Width="1.5" />
+    <AssociationLine Name="Nadmetanje" Type="DomenskeKlase.LicitacijaPriprema.Nadmetanje" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="43" Y="14.315" />
+        <Point X="43" Y="14.69" />
+        <Point X="45.562" Y="14.69" />
+        <Point X="45.562" Y="17.5" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAIgAACAAAKAgIAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Licitacija\Zapisnik.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Nadmetanje" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="PrijavaUZapisniku" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="DomenskeKlase.Licitacija.PrijavaUZapisniku">
+    <Position X="49" Y="12.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAQAAIACAAQAEAAAAAAACAAAAAAAAAGAAAAAAA=</HashCode>
+      <FileName>Licitacija\PrijavaUZapisniku.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Zapisnik" />
+      <Property Name="Prijava" />
+      <Property Name="IzreceneMere" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="DomenskeKlase.Licitacija.ClanoviZapisnikKomisija">
+    <Position X="38.25" Y="14.75" Width="1.5" />
+    <AssociationLine Name="Komisija" Type="DomenskeKlase.Ucenik.Komisija" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="39" Y="15.618" />
+        <Point X="39" Y="19.75" />
+        <Point X="30.25" Y="19.75" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="UlogaClanaKomisije" Type="DomenskeKlase.LicitacijaPriprema.UlogaClanaKomisije" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="39.75" Y="15.398" />
+        <Point X="45.479" Y="15.398" Type="JumpStart" />
+        <Point X="45.645" Y="15.398" Type="JumpEnd" />
+        <Point X="46.479" Y="15.398" Type="JumpStart" />
+        <Point X="46.645" Y="15.398" Type="JumpEnd" />
+        <Point X="49.125" Y="15.398" />
+        <Point X="49.125" Y="24.125" />
+        <Point X="49.5" Y="24.125" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAAAAAAAAIAAAAAAgAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Licitacija\ClanoviZapisnikKomisija.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Zapisnik" />
+      <Property Name="Komisija" />
+      <Property Name="UlogaClanaKomisije" />
+    </ShowAsAssociation>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

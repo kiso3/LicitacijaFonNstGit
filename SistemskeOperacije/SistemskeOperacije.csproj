@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C817CC6F-957F-4C6E-BB16-2FAF1C50DFBD}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SistemskeOperacije</RootNamespace>
+    <AssemblyName>SistemskeOperacije</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="LicitacijaPriprema\SoNadmetanje\GetNadmetanje.cs" />
+    <Compile Include="LicitacijaPriprema\SoNadmetanje\GetNadmetanjeForOglas.cs" />
+    <Compile Include="SoPrijava\InsertPrijava.cs" />
+    <Compile Include="LicitacijaPriprema\SoResenje\GetAllResenje.cs" />
+    <Compile Include="OpstaSo.cs" />
+    <Compile Include="SoPrijava\AzurirajPrijava.cs" />
+    <Compile Include="SoPrijava\DeletePrijava.cs" />
+    <Compile Include="SoPrijava\GetAllLicaForPrijava.cs" />
+    <Compile Include="SoPrijava\GetAllPrijaveForNademtanje.cs" />
+    <Compile Include="Ucesnik\SoFizicko\AzurirajFizicko.cs" />
+    <Compile Include="Ucesnik\SoFizicko\DeleteFizicko.cs" />
+    <Compile Include="Ucesnik\SoFizicko\InsertFizicko.cs" />
+    <Compile Include="Ucesnik\SoLice\AzurirajLice.cs" />
+    <Compile Include="Ucesnik\SoLice\DeleteLice.cs" />
+    <Compile Include="Ucesnik\SoLice\GetAllLice.cs" />
+    <Compile Include="Ucesnik\SoLice\GetLice.cs" />
+    <Compile Include="Ucesnik\SoLice\InsertLice.cs" />
+    <Compile Include="Ucesnik\SoMesto\AzurirajMesto.cs" />
+    <Compile Include="Ucesnik\SoMesto\DeleteMesto.cs" />
+    <Compile Include="Ucesnik\SoFizicko\GetAllFizicko.cs" />
+    <Compile Include="Ucesnik\SoFizicko\GetFizicko.cs" />
+    <Compile Include="Ucesnik\SoMesto\GetMesto.cs" />
+    <Compile Include="Ucesnik\SoMesto\InsertMesto.cs" />
+    <Compile Include="LicitacijaPriprema\SoOglas\GetAllOgals.cs" />
+    <Compile Include="Ucesnik\SoPravno\AzurirajPravno.cs" />
+    <Compile Include="Ucesnik\SoMesto\GetAllMesto.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Ucesnik\SoPravno\DeletePravno.cs" />
+    <Compile Include="Ucesnik\SoPravno\GetAllPravno.cs" />
+    <Compile Include="Ucesnik\SoPravno\GetPravno.cs" />
+    <Compile Include="Ucesnik\SoPravno\InsertPravno.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Broker\Broker.csproj">
+      <Project>{84780876-a3d0-4e1c-8d75-2f20f33ea4e4}</Project>
+      <Name>Broker</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DomenskeKlase\DomenskeKlase.csproj">
+      <Project>{dd7b5158-2de1-4e7b-a6dc-e0069deffb07}</Project>
+      <Name>DomenskeKlase</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Licitacija\SoZapisnik\" />
+    <Folder Include="Ponudjac\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
